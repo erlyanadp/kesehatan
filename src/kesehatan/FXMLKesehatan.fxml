@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="reset" prefHeight="500.0" prefWidth="405.0" style="-fx-background-color: #4da6ff;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.111" fx:controller="kesehatan.FXMLKesehatanController">
+    <children>
+        <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
+      <Label layoutX="161.0" layoutY="14.0" prefHeight="21.0" prefWidth="123.0" text="Cek Kesehatan">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="15.0" />
+         </font>
+      </Label>
+      <GridPane layoutX="61.0" layoutY="84.0" prefHeight="151.0" prefWidth="283.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="137.0" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="202.0" minWidth="10.0" prefWidth="183.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label fx:id="nama" prefHeight="17.0" prefWidth="117.0" text="Nama" />
+            <Label fx:id="beratbadan" prefHeight="17.0" prefWidth="76.0" text="Berat Badan" GridPane.rowIndex="1" />
+            <Label text="Tinggi Badan" GridPane.rowIndex="2" />
+            <Label text="Jenis Kelamin" GridPane.rowIndex="3" />
+            <RadioButton fx:id="lakilaki" mnemonicParsing="false" prefHeight="17.0" prefWidth="99.0" text="Laki-Laki" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <RadioButton fx:id="perempuan" mnemonicParsing="false" text="Perempuan" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextField fx:id="nama" GridPane.columnIndex="1" />
+            <TextField fx:id="beratbadan" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="tinggibadan" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+         </children>
+      </GridPane>
+      <Label layoutX="138.0" layoutY="279.0" prefHeight="21.0" prefWidth="170.0" text="Hasil Analisa Kesehatan" textAlignment="CENTER" textOverrun="WORD_ELLIPSIS">
+         <font>
+            <Font name="Britannic Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="hasil" layoutX="61.0" layoutY="307.0" prefHeight="17.0" prefWidth="144.0" text="Berat Badan Ideal Anda" />
+      <Label layoutX="307.0" layoutY="307.0" prefHeight="17.0" prefWidth="37.0" text="Kg" />
+      <JFXButton fx:id="buttonproses" layoutX="126.0" layoutY="238.0" onAction="#Proses" style="-fx-background-color: #99ccff;" text="Proses" />
+      <JFXButton fx:id="buttonreset" layoutX="238.0" layoutY="238.0" onAction="#Hapus" prefHeight="25.0" prefWidth="51.0" style="-fx-background-color: #99ccff;" text="Reset" />
+      <TextField fx:id="ideal" layoutX="203.0" layoutY="303.0" prefHeight="25.0" prefWidth="91.0" />
+      <TextArea fx:id="hasil" layoutX="51.0" layoutY="336.0" prefHeight="77.0" prefWidth="309.0" text="Hasil" />
+      <TextArea fx:id="saran" layoutX="52.0" layoutY="418.0" prefHeight="77.0" prefWidth="309.0" text="Saran" />
+    </children>
+</AnchorPane>
